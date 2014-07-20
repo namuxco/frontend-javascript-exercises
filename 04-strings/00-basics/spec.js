@@ -65,6 +65,7 @@ describe("findFirstMatch", function() {
   });
 });
 
+
 describe("findLastMatch", function() {
   it("should be defined", function() {
     expect(challenge.findLastMatch).to.exist;
@@ -78,6 +79,7 @@ describe("findLastMatch", function() {
     expect(challenge.findLastMatch("red red red red", "red")).to.eql(12);
   });
 });
+
 
 describe("substringBetweenMatches", function() {
   it("should be defined", function() {
