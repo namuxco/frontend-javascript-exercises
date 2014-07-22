@@ -1,6 +1,7 @@
 var expect = require('chai').expect;
 var challenge = require('./challenge');
 
+
 describe("inBetween", function() {
   it("should be defined", function() {
     expect(challenge.inBetween).to.exist;
