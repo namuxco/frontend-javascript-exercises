@@ -7,11 +7,11 @@ describe("createCourse", function() {
       duration = "4 weeks",
       students = ["Rob", "Tim", "Joe"];
 
-  var course = {
-    title: title,
-    duration: duration,
-    students: students
-  };
+  var course = {};
+  
+  course.title = title;
+  course.duration = duration;
+  course.students = students;
 
   it("should be defined", function() {
     expect(challenge.createCourse).to.exist;
