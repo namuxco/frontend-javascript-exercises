@@ -23,6 +23,49 @@ module.exports.sumNumbers = function(array){
     sumNumbers([1, 2, 3]) // should return 6
     */
 
-module.exports.splitAndLowerCaseString = undefined;
+module.exports.splitAndLowerCaseString = function(inputString){
+  var finalString = inputString.toLowerCase().split(",");
+  return finalString;
+};
 
-module.exports.addIndex = undefined;
+//i.toLowerCase().split(" ");
+
+/* Complete the `splitAndLowerCaseString` function. This function should:
+    - split the `inputString` argument into an array of strings by commas
+    - return an array with the set of split strings in lowercase format
+
+    For example:
+    
+    ```javascript
+    splitAndLowerCaseString("TEST") // returns ["test"]
+    splitAndLowerCaseString("THIS,IS,SPLIT,BY,COMMAS") // returns ["this", "is", "split", "by", "commas"]
+    splitAndLowerCaseString("THIS HAS NO COMMAS") // returns ["this has no commas"]
+    ```
+
+    > Hint: You should use the built-in string functions `split` and `toLowerCase`.
+    */
+
+module.exports.addIndex = function(array){
+  var result = [],
+      i;
+
+  for(i = 0; i < array.length; i++){
+    result.push(i + ' is ' + array[i]);
+  }
+
+  return result;
+};
+
+
+/*
+Complete the `addIndex` function. This function should:
+    - create and return a new array of all inputs as strings
+    - each of the new strings should start with "[index] is [data element at index]"
+
+    For example:
+    
+    ```javascript
+    addIndex([1, 2, 3]) // returns ["0 is 1", "1 is 2", "2 is 3"]
+    addIndex(['My', 1, 'number']) // returns ["0 is My", "1 is 1", "2 is number"]
+    ```
+    */

@@ -39,9 +39,9 @@ module.exports.copy = function(obj){
 
 module.exports.extend = function(dest, src){
 
-  for(var i in src){ 
-    if(!dest.hasOwnProperty(i)){
-      dest[i] = src[i];
+  for(var i in src){  //this only works with objects with a single dimension.  to make it work deeper, we would have to add recursion
+    if(src.hasOwnProperty(i)){ //filter out inherited properties of the object we are looping about
+      dest[i] = src[i]; //override/add properties
     }
   }
   return dest;
